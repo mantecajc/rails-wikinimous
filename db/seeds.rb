@@ -1,7 +1,8 @@
 require 'faker'
+Article.destroy_all
 
 10.times do
-  article = Article.create([{ title: "#{Faker::Food.dish}" }, { content: "#{Faker::Food.description}"} ])
+  article = Article.create(title: "#{Faker::Food.dish}", content: "#{Faker::Food.description}")
 end
 
 # This file should contain all the record creation needed to seed the database with its default values.
